@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="font-size: 2rem; text-align: center" id="container"></div>
+    <div id="text" style="font-size: 2rem; text-align: center"></div>
+    <script>
+      const numberText = document.createElement("h1");
+      numberText.innerHTML = Math.floor(Math.random() * 100) + 1;
+      const colors = ["red", "blue"];
+
+      if (numberText.innerHTML % 2 === 0) {
+        numberText.style.color = colors[0];
+      } else {
+        numberText.style.color = colors[1];
+      }
+
+      document.getElementById("text").appendChild(numberText);
+    </script>
+  </body>
+</html>
