@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
       <div className="p-4">
         <h2 className="text-lg font-primary text-gray-800">{product.name}</h2>
         <p className="text-gray-600 font-primary">{product.description}</p>
-        <div className="mt-4">
+        <div className="font-primary mt-4 mx-auto max-w-20 p-2 rounded-md bg-gray-600 text-white text-center py-2 hover:bg-gray-300 transition-colors hover:text-black duration-300 cursor-pointer hover:border-gray-800 border-2">
           <Price currency="$" price={product.price} />
           </div>
         </div>
