@@ -32,6 +32,3 @@ npm i --save @fortawesome/free-brands-svg-icons
 
 # React component package
 npm i --save @fortawesome/react-fontawesome@latest
-```
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
