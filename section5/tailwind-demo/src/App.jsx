@@ -27,6 +27,21 @@ function App() {
     },
   ];
 
+  const getAnimalColor = (color) => {
+    switch (color.toLowerCase()) {
+      case "brown":
+        return "text-yellow-800";
+      case "black":
+        return "text-gray-800";
+      case "white and black":
+        return "text-gray-600";
+      default:
+        return "text-black";
+    }
+  }
+
+  
+
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
@@ -36,7 +51,7 @@ function App() {
       <div className="mb-8 grid grid-cols-4 gap-2 border m-8 p-8 justify-center border-gray-300 rounded-lg bg-gray-50">
         {animalInfo.map((animal) => (
           <div key={animal.id} className="p-4 border rounded-lg shadow-2xl border-gray-500 last:border-0">
-            <h2 className="text-2xl font-semibold capitalize">{animal.name}</h2>
+            <h2 className={`text-2xl font-semibold capitalize ${getAnimalColor(animal.color)}`}>{animal.name}</h2>
             <p>Sound: {animal.sound}</p>
             <p>Color: {animal.color}</p>
             <p>Size: {animal.size}</p>
