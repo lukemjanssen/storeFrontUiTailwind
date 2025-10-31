@@ -45,7 +45,7 @@ export default function Dropdown({
                 <button
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-left bg-white border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                    className="w-full flex items-center justify-between px-4 py-3 text-left bg-white border border-gray-300 rounded-lg shadow-sm hover:border-primary focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
                 >
                     <span className={selectedOption ? "text-gray-900" : "text-gray-500"}>
                         {selectedOption ? selectedOption.label : placeholder}
@@ -78,14 +78,14 @@ export default function Dropdown({
                                             onClick={() => handleSelect(option)}
                                             className={`w-full text-left px-4 py-2.5 text-sm transition-colors duration-150 ${
                                                 value === option.value
-                                                    ? 'bg-blue-50 text-blue-700 font-medium'
+                                                    ? 'bg-blue-50 text-primary font-medium'
                                                     : 'text-gray-700 hover:bg-gray-50'
                                             }`}
                                         >
                                             <div className="flex items-center justify-between">
                                                 <span>{option.label}</span>
                                                 {value === option.value && (
-                                                    <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
                                                 )}
