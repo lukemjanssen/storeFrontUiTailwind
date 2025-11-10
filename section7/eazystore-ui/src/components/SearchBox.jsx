@@ -5,7 +5,7 @@ export default function SearchBox({ label, placeholder, value, onChange }) {
         <div className="flex items-center gap-4">
             {/* Label */}
             {label && (
-                <label className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                <label className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
                     {label}
                 </label>
             )}
@@ -16,8 +16,8 @@ export default function SearchBox({ label, placeholder, value, onChange }) {
                     type="text"
                     placeholder={placeholder}
                     value={value}
-                    onChange={(e) => onChange(e.target.value)}
-                    className="w-full px-4 py-3 text-left bg-white border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder:text-gray-500"
+                    onChange={onChange}
+                    className="w-full px-4 py-3 text-left bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:border-blue-400 dark:hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                 />
                 
                 {/* Search Icon */}

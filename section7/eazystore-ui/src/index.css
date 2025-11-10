@@ -8,4 +8,9 @@
     --color-dark: #4C1D95;
     --color-lighter: #F5F3FF;
     --color-light: #DDD6FE;
+    --color-normalBg: #FFFFFF;
+    --color-darkBg: #1E1E1E;
 }
+
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:is(.dark, .dark *));

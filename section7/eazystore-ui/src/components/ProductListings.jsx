@@ -58,7 +58,7 @@ export default function ProductListings({ products }) {
       </div>
 
       {/* Results Count */}
-      <div className="mb-4 text-sm text-gray-600">
+      <div className="mb-4 text-sm text-gray-600 dark:text-gray-300">
         Showing {filteredAndSortedProducts.length} of {products.length} products
         {searchTerm && ` matching "${searchTerm}"`}
       </div>

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: eazystore-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: eazystore
+      MYSQL_USER: eazystore_user
+      MYSQL_PASSWORD: eazystore_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      # Optional: Mount your SQL init scripts
+      - ./eazystore/src/main/resources/sql:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - eazystore-network
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  eazystore-network:
+    driver: bridge
