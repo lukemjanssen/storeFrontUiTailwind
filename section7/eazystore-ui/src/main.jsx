@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
 import About from "./components/About.jsx";
-import Contact from "./components/Contact.jsx";
+import Contact, { contactAction } from "./components/Contact.jsx";
 import Login from "./components/Login.jsx";
 import Home from "./components/Home.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
@@ -16,7 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}> 
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
+      <Route path="contact" element={<Contact />} action={contactAction} />
       <Route path="login" element={<Login />} />
     </Route>
   )

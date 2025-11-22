@@ -1,85 +1,171 @@
 function About() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10">
-      {/* Hero / Intro */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-pink-600 p-8 shadow-xl mb-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent)]" />
-        <h1 className="relative text-4xl font-extrabold tracking-tight text-white mb-4">
-          About EazyStore
+    <div className="max-w-[1152px] mx-auto px-6 py-8">
+      {/* Hero Section */}
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          About Eazy Store
         </h1>
-        <p className="relative max-w-2xl text-indigo-50 leading-relaxed">
-          We craft seamless shopping experiences powered by modern tech, thoughtful design, and a relentless focus on performance and accessibility.
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Your one-stop destination for creative stickers that bring joy and personality to everything you touch.
         </p>
       </div>
 
-      {/* Mission & Vision */}
-      <div className="grid gap-10 md:grid-cols-2 mb-12">
-        <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm">
-          <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">Our Mission</h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Empower shoppers and merchants with fast, reliable, and intuitive commerce experiences. We obsess over details so our users can enjoy frictionless discovery and checkout.
-          </p>
-        </div>
-        <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm">
-          <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">Our Vision</h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Build a platform that feels effortless—where personalization, performance, and trust converge to redefine digital commerce expectations.
-          </p>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-14">
-        {[
-          { label: "Products Served", value: "25K+" },
-          { label: "Global Shoppers", value: "120K" },
-          { label: "Avg. Response Time", value: "<150ms" },
-          { label: "Uptime", value: "99.98%" },
-        ].map((stat) => (
-          <div
-            key={stat.label}
-            className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 text-center shadow-sm"
-          >
-            <p className="text-3xl font-bold bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-pink-600 bg-clip-text text-transparent">
-              {stat.value}
+      {/* Our Story Section */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+          Our Story
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300">
+            <p className="leading-relaxed">
+              Founded in 2024, Eazy Store began with a simple mission: to make everyday items extraordinary. 
+              What started as a small collection of hand-designed stickers has grown into a vibrant community 
+              of creative enthusiasts who believe that the little details matter.
             </p>
-            <p className="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-              {stat.label}
+            <p className="leading-relaxed">
+              We understand that stickers are more than just decorations—they're expressions of personality, 
+              creativity, and individuality. That's why we've curated a diverse collection that speaks to 
+              different tastes, interests, and styles.
+            </p>
+            <p className="leading-relaxed">
+              Today, we're proud to serve thousands of customers worldwide, helping them add a personal touch 
+              to laptops, water bottles, notebooks, and more. Every sticker tells a story, and we're here to 
+              help you tell yours.
             </p>
           </div>
-        ))}
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg p-8 text-white">
+            <div className="space-y-6">
+              <div>
+                <div className="text-5xl font-bold">10K+</div>
+                <div className="text-indigo-100">Happy Customers</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold">500+</div>
+                <div className="text-indigo-100">Unique Designs</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold">50+</div>
+                <div className="text-indigo-100">Countries Served</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Values */}
-      <div className="mb-4">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">Core Values</h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "Performance First",
-              body: "We engineer for speed—optimizing builds, queries, and UI rendering to keep interactions instant.",
-            },
-            {
-              title: "Design With Empathy",
-              body: "Interfaces should feel intuitive and inclusive. Accessibility is a baseline, not a bonus.",
-            },
-            {
-              title: "Continuous Learning",
-              body: "We iterate relentlessly—refining architecture, tooling, and practices to stay ahead.",
-            },
-          ].map((val) => (
-            <div
-              key={val.title}
-              className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm flex flex-col"
-            >
-              <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">
-                {val.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-1">
-                {val.body}
+      {/* Our Values Section */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+          Our Values
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">🎨</div>
+            <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
+              Creativity First
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              We celebrate originality and encourage self-expression through unique, 
+              artist-designed stickers that stand out from the crowd.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">✨</div>
+            <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
+              Quality Matters
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Every sticker is printed on premium vinyl with weather-resistant coating, 
+              ensuring your designs stay vibrant and durable.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">🌍</div>
+            <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
+              Sustainability
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              We're committed to eco-friendly practices, using recyclable materials 
+              and sustainable packaging for all our products.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8">
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+          Why Choose Eazy Store?
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-1">Fast Shipping</h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                Orders processed within 24 hours with tracking included
               </p>
             </div>
-          ))}
+          </div>
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-1">Satisfaction Guaranteed</h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                30-day money-back guarantee on all products
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-1">Exclusive Designs</h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                Work with talented artists to bring you one-of-a-kind stickers
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-1">Customer Support</h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                Friendly support team ready to help with any questions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center bg-indigo-600 dark:bg-indigo-700 rounded-xl p-12 text-white">
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Start Your Collection?
+        </h2>
+        <p className="text-xl mb-6 text-indigo-100">
+          Browse our latest designs and find the perfect stickers for you.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/" 
+            className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+          >
+            Shop Now
+          </a>
+          <a 
+            href="/contact" 
+            className="bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-800 transition-colors border-2 border-white"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </div>
