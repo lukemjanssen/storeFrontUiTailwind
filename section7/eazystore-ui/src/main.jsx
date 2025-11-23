@@ -7,6 +7,7 @@ import About from "./components/About.jsx";
 import Contact, { contactAction } from "./components/Contact.jsx";
 import Login from "./components/Login.jsx";
 import Home from "./components/Home.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 
 // Route configuration refactored to use createRoutesFromElements for a more declarative style.
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}> 
       <Route index element={<Home />} />
+      <Route path="products/:productId" element={<ProductDetails />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} action={contactAction} />
       <Route path="login" element={<Login />} />

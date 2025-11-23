@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Price from "./Price";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="w-72 rounded-md mx-auto border border-gray-300 dark:border-gray-600 shadow-md overflow-hidden flex flex-col bg-white dark:bg-gray-800 hover:shadow-lg transition">
+    <Link 
+      to={`/products/${product.productId}`}
+      state={{ product }}
+      className="w-72 rounded-md mx-auto border border-gray-300 dark:border-gray-600 shadow-md overflow-hidden flex flex-col bg-white dark:bg-gray-800 hover:shadow-lg transition cursor-pointer"
+    >
       <div className="relative w-full h-72 border-b border-gray-300 dark:border-gray-600">
         <img
           src={product.imageUrl}
@@ -20,8 +25,11 @@ export default function ProductCard({ product }) {
           <div className="bg-lighter dark:bg-purple-900 text-primary dark:text-purple-300 font-medium text-sm py-2 px-4 rounded-tl-md">
             <Price currency="$" price={product.price} />
           </div>
+          <span className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold">
+            View Details →
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

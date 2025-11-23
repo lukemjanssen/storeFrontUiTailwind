@@ -1,5 +1,6 @@
 import { Form, useActionData, useNavigation } from "react-router-dom";
 import apiClient from "../../api/apiClient";
+import { useEffect, useRef } from "react";
 
 // Action function to handle form submission
 export async function contactAction({ request }) {
@@ -33,6 +34,13 @@ function Contact() {
   const actionData = useActionData();
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
+  const formRef = useRef();
+
+  useEffect(() => {
+    if (actionData && actionData.success) {
+      formRef.current?.reset();
+    }
+  }, [actionData]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
@@ -69,7 +77,7 @@ function Contact() {
       <div className="grid gap-10 md:grid-cols-3">
         {/* Form */}
         <div className="md:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm">
-          <Form method="post" className="space-y-6" aria-label="Contact form">
+          <Form ref={formRef} method="post" className="space-y-6" aria-label="Contact form">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Name
