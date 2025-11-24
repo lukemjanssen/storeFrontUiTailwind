@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-primary: "Josefin Sans";
+    --color-primary: #5B21B6;
+    --color-dark: #4C1D95;
+    --color-lighter: #F5F3FF;
+    --color-light: #DDD6FE;
+    --color-normalBg: #FFFFFF;
+    --color-darkBg: #1E1E1E;
+}
+
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:is(.dark, .dark *));
